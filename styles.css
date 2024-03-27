@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*APARTE*/
+a{
+    text-decoration: none;
+}
+
+header{
+    padding: 1em 0 1em 0;
+    border: solid;
+    max-height: 200px;
+}
+.Logo{
+    border: solid;
+    margin: auto;
+   width: 80%;
+   min-width: 180px;
+   max-width: 250px;
+   height: auto;
+    text-align: center;
+}
+.containerMenu{
+    border: solid red;
+    margin: 1em auto;
+    width: 80%; max-width: 800px;
+}
+.containerMenu > ol{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.containerMenu ol > li{
+    border: solid green;
+}
+
+/*PROPAGANDA carruzel*/
+.carrucel{
+    border: solid red;
+    margin: 3em auto;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+   display: grid;
+   grid-template-columns: repeat(4, 100%);
+   overflow-x: scroll;
+}
+.carrucel::-webkit-scrollbar{
+    display: none;
+}
+ 
+.carrucel > ul{
+    list-style: none;
+    margin: 10px;
+    height: 250px; 
+    min-height: 100px;
+    animation: muevo infinite linear 30s;
+}
+.carrucel ul > li{
+    width: 100%; height: 100%;
+}
+.carrucel ul li > img{
+    object-fit: contain;
+    width: 100%; height: 100%;
+}
+@keyframes muevo {
+    from{
+     margin-left: 0;
+    }
+    to{
+     margin-left: -400%;
+    }
+ }
+
+
+ /*productos MAIN*/
+#principal{
+    border: solid green;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+.producto{
+    width: 250px; height: 320px;
+    border: solid red;
+    margin: auto;
+}
+.productoLink{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; height: 250px;
+    border: solid rgb(0, 255, 229);
+}
+.imgProducto{
+    border: solid orange;
+    width: 100%; height:auto;
+}
+.precioProduct{
+    position: absolute;
+    margin: 1em;
+    background-color: rgb(33, 255, 33);
+}
+.abajoProduct{
+    border: solid moccasin;
+    text-align: center;
+}
+
+.nameProduct
+{
+  margin: 2px 0 0 0;
+    border: solid;
+    text-align: left;
+    padding:0 10px 0;
+}
+.btnProduct{
+   width: 80%;
+   margin:.5em auto;
+}
+
+
+/*TODO FOOTER*/
+footer{
+    border: solid red;
+    margin: 3em 0 auto;
+    background-color: var(--negro);
+}
+.containerFooter{
+    padding: 100px 0 0 0;
+    margin:auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    gap: 15px;
+}
+.containerFooter > ol{
+    margin:10px auto;
+   text-align: left;
+    list-style: none;
+}
+
+.containerFooter ol > li{
+    transform-origin: center;
+    transition: transform ease-in-out .3s;
+    padding: 10px 0 10px 0;
+}
+.containerFooter ol > li:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+#titulito{
+    transform:none;
+}
+#titulito > span{
+    font-family: 'logo';
+    font-size: 1.5rem;
+   text-align: left;
+    color: var(--beigeCalido);
+}
+.containerFooter ol li > a{
+    font-family: "final";
+}
+.containerFooter ol li > a:hover{
+    color: var(--amarilloMostaza);
+    transition: ease-in-out .3s;
+}
+.copy{
+    text-align: center;
+    margin: 50px 0 0px 0;
+    padding: 0 0 20px 0;
+}
+.copy a{
+    transition: ease .2s; 
+}
+.copy a:hover{
+    color:var(--Rojo);
+    transition: ease .2s;
+}
